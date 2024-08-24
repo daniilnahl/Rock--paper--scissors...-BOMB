@@ -1,0 +1,19 @@
+def main():
+
+    print("[WEOLCOME MESSAGE]")
+
+    user_input = input()
+    
+
+
+
+
+
+
+
+
+
+
+
+if __name__== "__main__":
+    main()
