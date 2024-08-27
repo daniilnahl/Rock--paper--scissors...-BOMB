@@ -22,7 +22,7 @@ def main():
     
     print(rock_paper_scissors(user_input, 'paper'))
     print(rock_paper_scissors(user_input, 'rock'))
-    print(rock_paper_scissors(user_input, 'scissors'))
+    rock_paper_scissors(user_input, 'scissors')
 
 
 
