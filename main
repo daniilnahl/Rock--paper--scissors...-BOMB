@@ -27,12 +27,13 @@ def main():
         user_input = input('Enter your move here: ')
         if user_input == 'rock' or 'paper' or 'scissors':
             #test
+            print('\n Your move is ', user_input)
             print(rock_paper_scissors(user_input, 'paper'))
             print(rock_paper_scissors(user_input, 'rock'))
             print(rock_paper_scissors(user_input, 'scissors'))
         else:
             print('Ooooops that doesn\'t seem like a valid response. \n Please try again!')
-            user_input = input('Enter your move here: ')
+            user_input = input('Enter your move hereZZZ: ')
             
 
 
