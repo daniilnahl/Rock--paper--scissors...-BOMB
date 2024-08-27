@@ -21,19 +21,27 @@ def rock_paper_scissors(player_input : str, computer_input : str):
       
 def main():
 
-    print("[WEOLCOME MESSAGE]")
+    print("""Welcome to 'Rock, paper, scissors... BOMB!!!'
+This game is a variation of a classical rock paper scissors game, but
+with a slight variation. The computer opponent has a random chance of
+throwing a bomb into the game.
+*********************************************************************
+RULES
+1. As a player the responses you can enter are: 'paper', 'rock' and 'scissors'. 
+2. Be careful with your responses since the app is case sensitive. 
+3. Have fun!\n""")
+    
+    #loop for the main game
     while True:
-
+        #get user input
         user_input = input('Enter your move here: ')
-        if user_input == 'rock' or 'paper' or 'scissors':
-            #test
-            print('\n Your move is ', user_input)
-            print(rock_paper_scissors(user_input, 'paper'))
-            print(rock_paper_scissors(user_input, 'rock'))
-            print(rock_paper_scissors(user_input, 'scissors'))
+
+        #checks if the user input is valid
+        if user_input in ['paper', 'rock', 'scissors']:
+            print('\nYour move is ', user_input)
         else:
-            print('Ooooops that doesn\'t seem like a valid response. \n Please try again!')
-            user_input = input('Enter your move hereZZZ: ')
+            print('Ooooops that doesn\'t seem like a valid response. Please try again!')
+            user_input = input('Enter your move here: ')
             
 
 
