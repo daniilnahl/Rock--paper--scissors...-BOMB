@@ -15,18 +15,26 @@ def rock_paper_scissors(player_input : str, computer_input : str):
     if player_input == 'scissors' and computer_input == 'paper':
         results = 'Player won, '+ player_input + ' beats ' + computer_input + '. Good job!'
     if player_input == computer_input:
-        results = 'It's a tie'
+        results = 'It\'s a tie!'
+        
     return results
       
 def main():
 
     print("[WEOLCOME MESSAGE]")
+    while True:
 
-    user_input = input()
-    
-    print(rock_paper_scissors(user_input, 'paper'))
-    print(rock_paper_scissors(user_input, 'rock'))
-    print(rock_paper_scissors(user_input, 'scissors'))
+        user_input = input('Enter your move here: ')
+        if user_input == 'rock' or 'paper' or 'scissors':
+            #test
+            print(rock_paper_scissors(user_input, 'paper'))
+            print(rock_paper_scissors(user_input, 'rock'))
+            print(rock_paper_scissors(user_input, 'scissors'))
+        else:
+            print('Ooooops that doesn\'t seem like a valid response. \n Please try again!')
+            user_input = input('Enter your move here: ')
+            
+
 
 
 
