@@ -1,18 +1,22 @@
 def rock_paper_scissors(player_input : str, computer_input : str):
     """Takes player input (str) and computer input (str) and returns who won (str)"""
+    results = ''
 
     if player_input == 'rock' and computer_input == 'paper':
-        return print('Computer won,', computer_input, 'beats', player_input, '. Good luck next time!')
+        results = 'Computer won, ' + computer_input + ' beats ' + player_input + '. Good luck next time!'
     if player_input == 'scissors' and computer_input == 'rock':
-        return print('Computer won,', computer_input, 'beats', player_input, '. Good luck next time!')
+        results = 'Computer won, ' + computer_input + ' beats ' + player_input + '. Good luck next time!'
     if player_input == 'paper' and computer_input == 'scissors':
-        return print('Computer won,', computer_input, 'beats', player_input, '. Good luck next time!')
+        results = 'Computer won, ' + computer_input + ' beats ' + player_input + '. Good luck next time!'
     if player_input == 'paper' and computer_input == 'rock':
-        return print('Player won,', player_input, 'beats', computer_input, '. Good job!')
+        results = 'Player won, '+ player_input + ' beats ' + computer_input + '. Good job!'
     if player_input == 'rock' and computer_input == 'scissors':
-        return print('Player won,', player_input, 'beats', computer_input, '. Good job!')
+        results = 'Player won, '+ player_input + ' beats ' + computer_input + '. Good job!'
     if player_input == 'scissors' and computer_input == 'paper':
-        return print('Player won,', player_input, 'beats', computer_input, '. Good job!') 
+        results = 'Player won, '+ player_input + ' beats ' + computer_input + '. Good job!'
+    if player_input == computer_input:
+        results = 'It's a tie'
+    return results
       
 def main():
 
@@ -22,9 +26,7 @@ def main():
     
     print(rock_paper_scissors(user_input, 'paper'))
     print(rock_paper_scissors(user_input, 'rock'))
-    rock_paper_scissors(user_input, 'scissors')
-
-
+    print(rock_paper_scissors(user_input, 'scissors'))
 
 
 
