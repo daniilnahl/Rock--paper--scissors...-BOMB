@@ -26,7 +26,7 @@ def computer_random():
     """Returns a random response (str) for the computer input"""    
 
 def main():
-
+    #welcome message
     print("""Welcome to 'Rock, paper, scissors... BOMB!!!'
 This game is a variation of a classical rock paper scissors game, but
 with a slight variation. The computer opponent has a random chance of
