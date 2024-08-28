@@ -1,5 +1,4 @@
 import random
-help(random)
 
 def rock_paper_scissors(player_input : str, computer_input : str):
     """Takes player input (str) and computer input (str) and returns who won (str)"""
@@ -17,6 +16,8 @@ def rock_paper_scissors(player_input : str, computer_input : str):
         results = 'Player won, '+ player_input + ' beats ' + computer_input + '. Good job!'
     if player_input == 'scissors' and computer_input == 'paper':
         results = 'Player won, '+ player_input + ' beats ' + computer_input + '. Good job!'
+    if computer_input == 'BOMB':
+        results = 'Computer won because he BLEW EVERYTHING UP BWUUAHAHAHAHAHAHA. Sucks to suck!'
     if player_input == computer_input:
         results = 'It\'s a tie!'
         
@@ -24,32 +25,43 @@ def rock_paper_scissors(player_input : str, computer_input : str):
 
 def computer_random():
     """Returns a random response (str) for the computer input"""    
+    random_response = random.choice(['scissors','paper','rock','BOMB'])
+    return random_response
 
 def main():
     #welcome message
     print("""Welcome to 'Rock, paper, scissors... BOMB!!!'
 This game is a variation of a classical rock paper scissors game, but
-with a slight variation. The computer opponent has a random chance of
+with a slight change. The computer opponent has a random chance of
 throwing a bomb into the game.
 *********************************************************************
 RULES
 1. As a player the responses you can enter are: 'paper', 'rock' and 'scissors'. 
 2. Be careful with your responses since the app is case sensitive. 
 3. Have fun!\n""")
-    
     #loop for the main game
     while True:
-        #get user input
-        user_input = input('Enter your move here: ')
-
-        #checks if the user input is valid
-        if user_input in ['paper', 'rock', 'scissors']:
-            print('\nYour move is ', user_input)
-        else:
-            print('Ooooops that doesn\'t seem like a valid response. Please try again!')
+        #loop for user's response 
+        while True:
             user_input = input('Enter your move here: ')
-            
-
+            if user_input in ['paper', 'rock', 'scissors']:#checks if user's response is valid 
+                computer_move = computer_random()
+                print('\nYour move is', user_input, 'computer\'s move is', computer_move, '\n')
+                print(rock_paper_scissors(user_input, computer_move))
+                break
+            else:
+                print('Ooooops that doesn\'t seem like a valid response. Please try again!')
+                       
+        #checks if the user wants to continue playing
+        continue_game = input('\nWould you like to play another round? (Type yes or no): ')
+        if continue_game == 'yes':
+            pass
+        elif continue_game == 'no':
+            print('Thanks for playing the game!')
+            break
+        else:
+            print('Invalid response. Game quits.')
+            break
 
 
 
