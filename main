@@ -1,6 +1,6 @@
 import random
 
-def rock_paper_scissors(player_input : str, computer_input : str):
+def rock_paper_scissors(player_input : str, computer_input : str) -> str:
     """Takes player input (str) and computer input (str) and returns who won (str)"""
     results = ''
 
@@ -23,7 +23,7 @@ def rock_paper_scissors(player_input : str, computer_input : str):
         
     return results
 
-def computer_random():
+def computer_random() -> str:
     """Returns a random response (str) for the computer input"""    
     random_response = random.choice(['scissors','paper','rock','BOMB'])
     return random_response
