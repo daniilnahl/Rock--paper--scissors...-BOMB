@@ -1,32 +1,4 @@
-import random
-
-def rock_paper_scissors(player_input : str, computer_input : str) -> str:
-    """Takes player input (str) and computer input (str) and returns who won (str)"""
-    results = ''
-
-    if player_input == 'rock' and computer_input == 'paper':
-        results = 'Computer won, ' + computer_input + ' beats ' + player_input + '. Good luck next time!'
-    if player_input == 'scissors' and computer_input == 'rock':
-        results = 'Computer won, ' + computer_input + ' beats ' + player_input + '. Good luck next time!'
-    if player_input == 'paper' and computer_input == 'scissors':
-        results = 'Computer won, ' + computer_input + ' beats ' + player_input + '. Good luck next time!'
-    if player_input == 'paper' and computer_input == 'rock':
-        results = 'Player won, '+ player_input + ' beats ' + computer_input + '. Good job!'
-    if player_input == 'rock' and computer_input == 'scissors':
-        results = 'Player won, '+ player_input + ' beats ' + computer_input + '. Good job!'
-    if player_input == 'scissors' and computer_input == 'paper':
-        results = 'Player won, '+ player_input + ' beats ' + computer_input + '. Good job!'
-    if computer_input == 'BOMB':
-        results = 'Computer won because he BLEW EVERYTHING UP BWUUAHAHAHAHAHAHA. Sucks to suck!'
-    if player_input == computer_input:
-        results = 'It\'s a tie!'
-        
-    return results
-
-def computer_random() -> str:
-    """Returns a random response (str) for the computer input"""    
-    random_response = random.choice(['scissors','paper','rock','BOMB'])
-    return random_response
+import game_module as gm
 
 def main():
     #welcome message
@@ -45,9 +17,9 @@ RULES
         while True:
             user_input = input('Enter your move here: ')
             if user_input in ['paper', 'rock', 'scissors']:#checks if user's response is valid 
-                computer_move = computer_random()
-                print('\nYour move is', user_input, 'computer\'s move is', computer_move, '\n')
-                print(rock_paper_scissors(user_input, computer_move))
+                computer_input = gm.computer_random()
+                print('\nYour move is', user_input, 'computer\'s move is', computer_input, '\n')
+                print(gm.rock_paper_scissors(user_input, computer_input))
                 break
             else:
                 print('Ooooops that doesn\'t seem like a valid response. Please try again!')
