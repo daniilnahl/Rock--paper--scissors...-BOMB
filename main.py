@@ -11,12 +11,13 @@ RULES
     
 def main():
     welcome_message()
-    
+
     #loop for the main game
     while True:
 
         #loop for user's response 
         while True:
+            
             #takes user input and converts it into lower case
             user_input = input('Enter your move here: ').lower()
 
