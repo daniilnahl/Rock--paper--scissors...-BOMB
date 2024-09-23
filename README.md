@@ -2,14 +2,6 @@
 
 A fun twist on the classic Rock-Paper-Scissors game, introducing a new element—Bomb! The game allows player to choose between three moves: Rock, Paper and Scissors while computer has an additional option, BOMB. Each move has its own unique interactions, making the game more exciting!
 
-## Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Game Rules](#game-rules)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Features
 - **Four moves**: Rock, Paper and Scissors.
 - **Randomized opponent moves**: The computer opponent selects its move randomly, making the game unpredictable.
