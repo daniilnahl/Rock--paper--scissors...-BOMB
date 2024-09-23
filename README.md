@@ -23,17 +23,13 @@ A fun twist on the classic Rock-Paper-Scissors game, introducing a new elementâ€
    git clone https://github.com/daniilnahl/Rock--paper--scissors...-BOMB.git
    ```
 2. Navigate to the project directory:
-
   ```bash
   cd Rock--paper--scissors...-BOMB
   ```
-
 3. Run the game script:
-
   ```bash
   python main.py
   ```
-
 ## Usage
 Once the game is started, you will be prompted to select one of the following moves:
 
