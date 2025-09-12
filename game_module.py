@@ -35,7 +35,8 @@ def rock_paper_scissors(player_input : str, computer_input : str) -> str:
     
     #determines winner based on player and computer inputes
     elif player_input in results:
-        winner = results[player_input]
+        fix = results[player_input]
+        winner = fix[computer_input]
         if winner == 'Player':
             return f'Player won, {player_input} beats {computer_input}. Good job!'
         else:
